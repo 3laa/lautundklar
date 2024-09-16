@@ -1,0 +1,16 @@
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+
+Redirect 301 /kompetenzen/typo3-cms https://lautundklar.lautundklar.dev/typo3/
+Redirect 301 /kompetenzen/typo3-cms/ https://lautundklar.lautundklar.dev/typo3/
+Redirect 301 /neue-funnel-page-fuer-die-communigate-gmbh https://lautundklar.lautundklar.dev/recruiting-kampagne-mit-funnelpages-fuer-die-communigate-gmbh/
+Redirect 301 /neue-funnel-page-fuer-die-communigate-gmbh/ https://lautundklar.lautundklar.dev/recruiting-kampagne-mit-funnelpages-fuer-die-communigate-gmbh/
+</IfModule>
+
+# END WordPress

@@ -87,10 +87,10 @@
 	<IfModule mod_rewrite.c>
 		RewriteEngine On
 
-		Redirect 301 /kompetenzen/typo3-cms https://lautundklar.de/typo3/
-        Redirect 301 /kompetenzen/typo3-cms/ https://lautundklar.de/typo3/
-        Redirect 301 /neue-funnel-page-fuer-die-communigate-gmbh https://lautundklar.de/recruiting-kampagne-mit-funnelpages-fuer-die-communigate-gmbh/
-        Redirect 301 /neue-funnel-page-fuer-die-communigate-gmbh/ https://lautundklar.de/recruiting-kampagne-mit-funnelpages-fuer-die-communigate-gmbh/
+        RewriteCond %{QUERY_STRING} ^$
+        RewriteRule ^kompetenzen/typo3-cms/$ https://lautundklar.de/typo3/ [R=301,L]
+        RewriteCond %{QUERY_STRING} ^$
+        RewriteRule ^neue-funnel-page-fuer-die-communigate-gmbh/$ https://lautundklar.de/recruiting-kampagne-mit-funnelpages-fuer-die-communigate-gmbh/ [R=301,L]
 
 		# Protect System Files - Security > Settings > System Tweaks > System Files
 		RewriteRule ^wp-admin/install\.php$ - [F]
