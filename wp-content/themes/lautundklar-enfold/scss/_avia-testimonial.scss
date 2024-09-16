@@ -1,0 +1,26 @@
+
+html.responsive body#top .av-large-testimonial-slider.avia-testimonial-wrapper .avia-testimonial {
+  padding: 0 50px;
+  @media only screen and (min-width: 769px) {
+    padding: 0 100px;
+  }
+}
+html.responsive #top .avia-testimonial-wrapper .avia-slideshow-arrows.avia-slideshow-controls {
+  & .prev-slide,
+  & .next-slide {
+    &:before {
+      border: 0 none;
+    }
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  & .prev-slide {
+
+  }
+
+  & .next-slide {
+
+  }
+}

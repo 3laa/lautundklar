@@ -1,0 +1,114 @@
+html.html_boxed.responsive, html.html_boxed.responsive body#top {
+  font-family: 'Montserrat';
+  //word-break: break-word;
+  hyphens: auto;
+  color: $color;
+  font-size: 16px;
+  font-weight: 300;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  font-family: 'Montserrat';
+  //word-break: break-word;
+  hyphens: auto;
+  color: $color;
+}
+html, body, div, span, applet, object, iframe, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  font-weight: 300;
+}
+
+.responsive #top p, .responsive #top ul, .responsive #top li {
+  font-size: 20px;
+  line-height: 162%;
+  &.small {
+    font-size: 85%;
+    display: block;
+    line-height: 23px;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.responsive #top p {
+  margin: 0 0 1.1em;
+}
+
+.responsive #top  p a {
+  border-bottom: 1px dotted #222222;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+.responsive #top  .av_inherit_color p a {
+  border-bottom: 1px dotted $white;
+  display: inline-block;
+  text-decoration: none;
+}
+
+
+
+.responsive #top h1, .responsive #top h2, .responsive #top h3, .responsive #top h4, .responsive #top h5, .responsive #top h6 {
+  margin-bottom: 20px;
+  font-weight: 700;
+
+  & span {
+    font-weight: 700;
+  }
+}
+/*.responsive #top h1,
+.responsive #top .title-h1,
+.responsive #top .title-h1 * {
+  font-size: 50px;
+  line-height: 1.1em;
+}
+.responsive #top h2,
+.responsive #top .title-h2,
+.responsive #top .title-h2 * {
+  font-size: 36px;
+  line-height: 1.5em;
+}
+.responsive #top h3,
+.responsive #top .title-h3,
+.responsive #top .title-h3 * {
+  font-size: 28px;
+  line-height: 1.5em;
+}
+.responsive #top h4,
+.responsive #top .title-h4,
+.responsive #top .title-h4 * {
+  font-size: 24px;
+  line-height: 1.5em;
+}*/
+.responsive #top .av-thin-font .av-special-heading-tag,
+.responsive #top .modern-quote .av-special-heading-tag{
+  font-weight: 700;
+}
+
+
+
+
+.responsive #top .main_color .widget_first,
+.responsive #top .main_color strong,
+.responsive #top .main_color b,
+.responsive #top .main_color .av-sort-by-term a.active_sort,
+.responsive #top .main_color .special_amp {
+  font-weight: 700;
+  color: $color;
+}
+
+
+@media only screen and (max-width: 479px) {
+
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+}

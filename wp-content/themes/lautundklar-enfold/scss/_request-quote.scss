@@ -1,0 +1,12 @@
+.request-free-quote .entry-content-wrapper .flex_column {
+  &:nth-child(1) {
+    text-align: center;
+    @media only screen and (min-width: 1451px) {
+      text-align: left;
+    }
+  }
+  &:nth-child(2) {
+    display: flex !important;
+    justify-content: center;
+  }
+}

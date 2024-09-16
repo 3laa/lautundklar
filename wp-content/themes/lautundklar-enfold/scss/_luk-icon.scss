@@ -1,0 +1,86 @@
+html.responsive #top .justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+html.responsive #top .luk-icon-70,
+html.responsive #top .luk-icon-50 {
+  & .iconbox_content .entry-content-header {
+    min-height: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-end;
+    & .iconbox_content_title {
+      border: none;
+      padding: 0;
+      position: relative;
+      margin: 0;
+      clear: none;
+      letter-spacing: 1px;
+      text-transform: none;
+      font-size: 20px;
+    }
+    & .iconbox_icon  {
+      border-radius: 0;
+      text-align: center;
+      position: relative;
+      top: 0;
+      left: 0;
+      height: 50px;
+      width: 50px;
+      line-height: 50px;
+      font-size: 50px;
+      margin: 0 10px 0 0;
+    }
+  }
+}
+
+html.responsive #top .luk-icon-70 {
+  & .iconbox_content .entry-content-header {
+    min-height: 70px;
+    & .iconbox_content_title {
+      font-size: 28px;
+    }
+    & .iconbox_icon  {
+      height: 70px;
+      width: 70px;
+      line-height: 70px;
+      font-size: 70px;
+    }
+  }
+}
+
+html.responsive #top .luk-icon-home {
+  & .iconbox_content .entry-content-header {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin-bottom: 10px;
+    & .iconbox_icon  {
+      border-radius: 0;
+      text-align: center;
+      position: relative;
+      top: 0;
+      left: 0;
+      height: 60px;
+      width: 60px;
+      line-height: 60px;
+      font-size: 60px;
+      margin: 0;
+    }
+    & .iconbox_content_title {
+      margin-bottom: 0;
+      font-size: 23px;
+    }
+  }
+
+  & .iconbox_content .iconbox_content_container {
+
+  }
+
+  & .entry-footer {
+    display: none;
+  }
+}

@@ -1,0 +1,5 @@
+.idea
+!.gitignore
+wp-content/plugins/
+wp-content/themes/*
+!wp-content/themes/lautundklar-enfold/

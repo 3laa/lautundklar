@@ -1,0 +1,243 @@
+html.responsive body#top .reference {
+  &.not-view-port {
+    opacity: 1;
+  }
+  & * {
+    color: #000000 !important;;
+    fill: #000000 !important;;
+  }
+}
+html.responsive body#top .reference.reference-dark {
+  background: #222222;
+  & * {
+    color: $white !important;;
+    fill: $white !important;;
+  }
+}
+
+html.responsive body#top .reference.macbook-type {
+  & .reference-image-column .avia_codeblock_section {
+    @media only screen and (min-width: 1451px)
+    {
+      width: 150%;
+    }
+  }
+  & .reference-image-column.first .avia_codeblock_section {
+    @media only screen and (min-width: 1451px)
+    {
+      margin-left: -50%;
+    }
+  }
+}
+html.responsive body#top .reference.tablet-type {
+  & .reference-image-column .avia_codeblock_section {
+    @media only screen and (min-width: 1451px)
+    {
+      width: 130%;
+    }
+  }
+  & .reference-image-column.first .avia_codeblock_section {
+    @media only screen and (min-width: 1451px)
+    {
+      margin-left: -30%;
+    }
+  }
+}
+
+html.responsive body#top .reference .avia-button-wrap {
+  margin-top: 10px;
+}
+html.responsive body#top .reference .avia-button-wrap .avia-button {
+  padding: 10px 37px;
+  line-height: 1;
+  border-radius: 0;
+  font-size: 15px;
+  color: #000000;
+}
+
+html.responsive body#top .reference .av-special-heading .av-subheading.av-subheading_above {
+  margin: 0;
+}
+html.responsive body#top .reference .av-special-heading .av-special-heading-tag {
+  margin-bottom: 32px;
+  color: #000000;
+  &:after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: $primary;
+    margin-top: 6px;
+  }
+}
+
+html.responsive body#top .reference .luk-iconbox {
+  margin-bottom: 30px;
+
+  & .iconbox-header {
+    align-items: flex-start;
+  }
+
+  & .iconbox-header .iconbox-title h4 {
+    margin-bottom: 0;
+  }
+
+  & .iconbox-header .iconbox-svg {
+    margin-right: 30px
+  }
+
+  & .iconbox-content {
+    @media only screen and (min-width: 479px) {
+      margin-top: -24px;
+    }
+    padding-left: 78px;
+  }
+}
+
+html.responsive body#top .reference.macbook-type {
+  & .reference-image {
+    display: block;
+    position: relative;
+    padding-bottom: 55.06%;
+    background-image: url("https://lautundklar.de/wp-content/uploads/2024/02/Macbook2.png");
+    background-size: 100% auto;
+    background-position: top center;
+
+    & .reference-image-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding-top: 3%;
+      padding-bottom: 6%;
+      padding-left: 15%;
+      padding-right: 14%;
+    }
+  }
+}
+html.responsive body#top .reference.tablet-type {
+  & .reference-image {
+    display: block;
+    position: relative;
+    padding-bottom: 77.360%;
+    background-image: url("https://lautundklar.de/wp-content/uploads/2024/02/Mockup_Tablet2.png");
+    background-size: 100% auto;
+    background-position: top center;
+    &:hover {
+      animation: scale3dImg .5s ease-in-out;
+    }
+
+    & .reference-image-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding-top: 4%;
+      padding-bottom: 4%;
+      padding-left: 4%;
+      padding-right: 4%;
+    }
+
+    & .reference-image-wrapper .reference-image-holder {
+      border-radius: 8px;
+      @media only screen and (min-width: 450px) {
+        border-radius: 15px;
+      }
+      @media only screen and (min-width: 768px) {
+        border-radius: 25px;
+      }
+      overflow: hidden;
+    }
+  }
+}
+
+
+html.responsive body#top .reference .reference-image .reference-image-wrapper .reference-image-holder {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  cursor: n-resize;
+  background: #000000;
+}
+html.responsive body#top .reference {
+  & .reference-image .reference-image-wrapper .reference-image-holder img {
+    object-fit: cover;
+    overflow: hidden;
+    width:100%;
+    transform: translateY(0);
+    transition: transform 1s ease-in-out;
+    &:hover {
+      transform: translateY(calc(-80%));
+      transition: transform 5s ease-in-out;
+    }
+  }
+  &.micro-epsilon .reference-image .reference-image-wrapper .reference-image-holder img:hover {
+    transform: translateY(calc(-76.5%));
+  }
+  &.cytec-gmbh .reference-image .reference-image-wrapper .reference-image-holder img:hover {
+    transform: translateY(calc(-86.5%));
+  }
+  &.steuerberater-jobst .reference-image .reference-image-wrapper .reference-image-holder img:hover {
+    transform: translateY(calc(-77%));
+  }
+  &.mesutronic .reference-image .reference-image-wrapper .reference-image-holder img:hover {
+    transform: translateY(calc(-80.5%));
+  }
+  &.duale-medizin .reference-image .reference-image-wrapper .reference-image-holder img:hover {
+    transform: translateY(calc(-84%));
+  }
+  &.solare-werkstaetten .reference-image .reference-image-wrapper .reference-image-holder img:hover {
+    transform: translateY(calc(-76%));
+  }
+  &.schwarzmueller .reference-image .reference-image-wrapper .reference-image-holder img:hover {
+    transform: translateY(calc(-92.5%));
+  }
+  &.architekturschmiede .reference-image .reference-image-wrapper .reference-image-holder img:hover {
+    transform: translateY(calc(-67%));
+  }
+  &.dahoam .reference-image .reference-image-wrapper .reference-image-holder img:hover {
+    transform: translateY(calc(-84.8%));
+  }
+  &.icunet .reference-image .reference-image-wrapper .reference-image-holder img:hover {
+    transform: translateY(calc(-82%));
+  }
+  &.tauchshop-online .reference-image .reference-image-wrapper .reference-image-holder img:hover {
+    transform: translateY(calc(-78.7%));
+  }
+  &.skancraft .reference-image .reference-image-wrapper .reference-image-holder img:hover {
+    transform: translateY(calc(-60.8%));
+  }
+  &.heimat-kracherl .reference-image .reference-image-wrapper .reference-image-holder img:hover {
+    transform: translateY(calc(-78.5%));
+  }
+  &.fleischgeniesser .reference-image .reference-image-wrapper .reference-image-holder img:hover {
+    transform: translateY(calc(-71%));
+  }
+  &.daunenhof .reference-image .reference-image-wrapper .reference-image-holder img:hover {
+    transform: translateY(calc(-79%));
+  }
+}
+
+html.responsive body#top .reference-title {
+  & .av-special-heading,
+  & .av-special-heading-tag {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+  }
+}
+@keyframes scale3dImg {
+  0%   {transform: scale3d(1, 1, 1);}
+  50%  {transform: scale3d(1.01, 1.01, 1);}
+  100% {transform: scale3d(1, 1, 1);}
+
+}
+
+@keyframes imgTranslateY {
+  0%   {transform: translateY(0);}
+  50%  {transform: translateY(calc(-80%));}
+  100% {transform: translateY(0);}
+}

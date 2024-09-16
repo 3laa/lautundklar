@@ -1,0 +1,10 @@
+html.responsive body#top .avia-post-nav {
+  &:hover .entry-info-wrap {
+    width: 110px;
+  }
+
+  & .entry-info-wrap .entry-info .entry-title {
+    display: none;
+  }
+}
+

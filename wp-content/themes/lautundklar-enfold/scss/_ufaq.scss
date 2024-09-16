@@ -1,0 +1,56 @@
+.ewd-ufaq-faq-title{
+  h1,h2,h3,h4,h5,h6{
+    letter-spacing:0px;
+  }
+}
+
+div.ewd-ufaq-faq-div{
+  margin-bottom:1rem;
+  .ewd-ufaq-faq-categories{
+    display:none;
+  }
+}
+
+.ewd-ufaq-faq-title .ewd-ufaq-post-margin-symbol span {
+  font-family: 'ewd-toggle-icon';
+  color: $primary;
+}
+
+
+.ewd-ufaq-faq-title .ewd-ufaq-post-margin {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+
+body.single-ufaq#top {
+  & .fullsize .template-blog .post .entry-content-wrapper > *,
+  & .fullsize .template-blog .post .entry-content-wrapper {
+    max-width: 100%;
+  }
+
+  & .fullsize .template-blog .post .entry-content-wrapper .entry-content-header {
+    display: none;
+  }
+
+  & .post_delimiter {
+    display: none;
+  }
+}
+
+
+body.tax-ufaq-category#top,
+body.post-type-archive-ufaq#top {
+  & .fullsize .template-blog .post-title,
+  & .fullsize .template-blog .post .entry-content-wrapper > *,
+  & .fullsize .template-blog .post .entry-content-wrapper {
+    max-width: 100%;
+  }
+
+  & .bloglist-excerpt .read-more-link {
+    display: none;
+  }
+}
+

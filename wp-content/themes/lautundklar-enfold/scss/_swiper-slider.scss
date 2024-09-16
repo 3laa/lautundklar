@@ -1,0 +1,91 @@
+.swiper-slider {
+  position: relative;
+}
+.swiper-slider .swiper .swiper-wrapper .swiper-slide .swiper-portfolio-item {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+.swiper-slider .swiper .swiper-wrapper .swiper-slide .swiper-portfolio-item .item-image {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  & img {
+    margin: 0;
+    padding: 0;
+  }
+}
+.swiper-slider .swiper .swiper-wrapper .swiper-slide .swiper-portfolio-item .item-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  padding: 25px 30px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( 90deg, rgba(255,43,88,0.8) 0%, rgba(255,216,0,0.8) 100% ) !important;
+    opacity: 0;
+    transition: opacity 0.5s 0.2s;
+  }
+}
+.swiper-slider .swiper .swiper-wrapper .swiper-slide .swiper-portfolio-item:hover {
+  & .item-overlay {
+    &:before {
+      opacity: 1;
+      transition: opacity 0.5s;
+    }
+    & h4 {
+      opacity: 1;
+      transform: scale3d(1, 1, 1) translateY(0);
+      transition: transform 0.3s 0.1s, opacity 0.3s 0.1s;
+    }
+  }
+}
+.swiper-slider .swiper .swiper-wrapper .swiper-slide .swiper-portfolio-item .item-overlay h4 {
+  text-transform: uppercase;
+  color: $white;
+  font-size: 20px;
+  opacity: 0;
+  transform: scale3d(0, 0, 0) translateY(200px);
+  transition: transform 0s 0.5s, opacity 0.3s 0.1s;
+}
+
+
+.swiper-slider .swiper-button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background: #b6c6c9;
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: all .35s ease-in-out;
+
+  &.swiper-button-prev { left: 0; }
+  &.swiper-button-next { right: 0; }
+
+  &:after {
+    font-size: 20px;
+    color: $white;
+  }
+  &:hover {
+    background: $primary;
+  }
+}
+
+.swiper-slider:hover .swiper-button {
+  transform: translateY(0);
+  opacity: 1;
+}

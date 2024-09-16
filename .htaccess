@@ -1,0 +1,273 @@
+# BEGIN iThemes Security - Do not modify or remove this line
+# iThemes Security Config Details: 2
+	# Ban Hosts - Security > Settings > Banned Users
+	SetEnvIF REMOTE_ADDR "^14\.215\.51\.70$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^14\.215\.51\.70$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^14\.215\.51\.70$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^14\.18\.119\.55$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^14\.18\.119\.55$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^14\.18\.119\.55$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^219\.151\.158\.226$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^219\.151\.158\.226$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^219\.151\.158\.226$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^1\.14\.77\.81$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^1\.14\.77\.81$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^1\.14\.77\.81$" DenyAccess
+
+	SetEnvIF REMOTE_ADDR "^210\.16\.189\.4$" DenyAccess
+	SetEnvIF X-FORWARDED-FOR "^210\.16\.189\.4$" DenyAccess
+	SetEnvIF X-CLUSTER-CLIENT-IP "^210\.16\.189\.4$" DenyAccess
+
+	<IfModule mod_authz_core.c>
+		<RequireAll>
+			Require all granted
+			Require not env DenyAccess
+			Require not ip 14.215.51.70
+			Require not ip 14.18.119.55
+			Require not ip 219.151.158.226
+			Require not ip 1.14.77.81
+			Require not ip 210.16.189.4
+		</RequireAll>
+	</IfModule>
+	<IfModule !mod_authz_core.c>
+		Order allow,deny
+		Allow from all
+		Deny from env=DenyAccess
+		Deny from 14.215.51.70
+		Deny from 14.18.119.55
+		Deny from 219.151.158.226
+		Deny from 1.14.77.81
+		Deny from 210.16.189.4
+	</IfModule>
+
+	# Protect System Files - Security > Settings > System Tweaks > System Files
+	<files .htaccess>
+		<IfModule mod_authz_core.c>
+			Require all denied
+		</IfModule>
+		<IfModule !mod_authz_core.c>
+			Order allow,deny
+			Deny from all
+		</IfModule>
+	</files>
+	<files readme.html>
+		<IfModule mod_authz_core.c>
+			Require all denied
+		</IfModule>
+		<IfModule !mod_authz_core.c>
+			Order allow,deny
+			Deny from all
+		</IfModule>
+	</files>
+	<files readme.txt>
+		<IfModule mod_authz_core.c>
+			Require all denied
+		</IfModule>
+		<IfModule !mod_authz_core.c>
+			Order allow,deny
+			Deny from all
+		</IfModule>
+	</files>
+	<files wp-config.php>
+		<IfModule mod_authz_core.c>
+			Require all denied
+		</IfModule>
+		<IfModule !mod_authz_core.c>
+			Order allow,deny
+			Deny from all
+		</IfModule>
+	</files>
+
+	# Disable Directory Browsing - Security > Settings > System Tweaks > Directory Browsing
+	Options -Indexes
+
+	<IfModule mod_rewrite.c>
+		RewriteEngine On
+
+		# Protect System Files - Security > Settings > System Tweaks > System Files
+		RewriteRule ^wp-admin/install\.php$ - [F]
+		RewriteRule ^wp-admin/includes/ - [F]
+		RewriteRule !^wp-includes/ - [S=3]
+		RewriteRule ^wp-includes/[^/]+\.php$ - [F]
+		RewriteRule ^wp-includes/js/tinymce/langs/.+\.php - [F]
+		RewriteRule ^wp-includes/theme-compat/ - [F]
+		RewriteCond %{REQUEST_FILENAME} -f
+		RewriteRule (^|.*/)\.(git|svn)/.* - [F]
+
+		# Disable PHP in Uploads - Security > Settings > System Tweaks > PHP in Uploads
+		RewriteRule ^wp\-content/uploads/.*\.(?:php[1-7]?|pht|phtml?|phps)\.?$ - [NC,F]
+
+		# Disable PHP in Plugins - Security > Settings > System Tweaks > PHP in Plugins
+		RewriteRule ^wp\-content/plugins/.*\.(?:php[1-7]?|pht|phtml?|phps)\.?$ - [NC,F]
+
+		# Disable PHP in Themes - Security > Settings > System Tweaks > PHP in Themes
+		RewriteRule ^wp\-content/themes/.*\.(?:php[1-7]?|pht|phtml?|phps)\.?$ - [NC,F]
+	</IfModule>
+
+	# Disable XML-RPC - Security > Settings > WordPress Tweaks > XML-RPC
+	<files xmlrpc.php>
+		<IfModule mod_authz_core.c>
+			Require all denied
+		</IfModule>
+		<IfModule !mod_authz_core.c>
+			Order allow,deny
+			Deny from all
+		</IfModule>
+	</files>
+# END iThemes Security - Do not modify or remove this line
+
+#AuthType Basic
+#AuthName "Protected Area"
+#AuthUserFile /var/www/vhosts/lautundklar.dev/enfold.lautundklar.dev/.htpasswd
+#require valid-user
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RedirectMatch 302 /bewertungen https://g.page/r/CWaZGFz0qRG2EB0/review
+RedirectMatch 302 /bewertung https://g.page/r/CWaZGFz0qRG2EB0/review
+RedirectMatch 302 /bewerten https://g.page/r/CWaZGFz0qRG2EB0/review
+RewriteRule ^blog/(.+?)(-[0-9]+)?$ /blog/ [L,R=301]
+RewriteRule ^tag/(.+?)(-[0-9]+)?$ / [L,R=301]
+RewriteRule ^wp-content/(.+?)(-[0-9]+)?$ /blog/ [L,R=301]
+Redirect 301 "/brueckentag-27-05-2022/" "/"
+Redirect 301 "/referenzen/projekte/responsive-multidomain-website-specific-group/" "/"
+Redirect 301 "/neue-funnel-page-fuer-die-communigate-gmbh/" "/"
+Redirect 301 "/team-2024/" "/team/"
+Redirect 301 "/referenzen/corporate-design-stil-sicher/" "/referenzen/"
+Redirect 301 "/lostpass" "/"
+Redirect 301 "/image-info-section/" "/"
+Redirect 301 "/online-marketing/" "/kompetenzen/"
+Redirect 301 "/google-adwords/" "/google-ads/"
+Redirect 301 "/jobs/junior-web-developer/" "/jobs/"
+Redirect 301 "/jobs/senior-web-developer/" "/jobs/"
+Redirect 301 "/referenzen/responsive-design-reinerkunze/" "/referenzen/"
+Redirect 301 "/?p=16112" "/"
+Redirect 301 "/referenzen/projekte/responsive-typo3-website-steuerberatung-jobst/" "/referenzen/"
+Redirect 301 "/job/mediengestalter-digital-print-teilzeit-2023/" "/job/"
+RewriteRule ^neuigkeiten/(.+?)(-[0-9]+)?$ /aktuelles/ [L,R=301]
+</IfModule>
+# BEGIN WordPress
+# Die Anweisungen (Zeilen) zwischen „BEGIN WordPress“ und „END WordPress“ sind
+# dynamisch generiert und sollten nur über WordPress-Filter geändert werden.
+# Alle Änderungen an den Anweisungen zwischen diesen Markierungen werden überschrieben.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+RewriteRule ^wp-content/plugins/js_composer/assets/vc/vc_gitem_image.png$ /wp-content/themes/lautundklar/img/luk-signet-1024x1024.png [L,R=301]
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+# BEGIN ShortPixel Adaptive Images
+# Die Anweisungen (Zeilen) zwischen „BEGIN ShortPixel Adaptive Images“ und „END ShortPixel Adaptive Images“ sind
+# dynamisch generiert und sollten nur über WordPress-Filter geändert werden.
+# Alle Änderungen an den Anweisungen zwischen diesen Markierungen werden überschrieben.
+# END ShortPixel Adaptive Images
+
+
+
+### Begin: Browser caching of resource files ###
+
+# This affects Frontend and Backend and increases performance.
+<IfModule mod_expires.c>
+
+	ExpiresActive on
+	ExpiresDefault                                      "access plus 1 month"
+
+	ExpiresByType text/css                              "access plus 1 year"
+
+	ExpiresByType application/json                      "access plus 0 seconds"
+	ExpiresByType application/ld+json                   "access plus 0 seconds"
+	ExpiresByType application/schema+json               "access plus 0 seconds"
+	ExpiresByType application/vnd.geo+json              "access plus 0 seconds"
+	ExpiresByType application/xml                       "access plus 0 seconds"
+	ExpiresByType text/xml                              "access plus 0 seconds"
+
+	ExpiresByType image/vnd.microsoft.icon              "access plus 1 week"
+	ExpiresByType image/x-icon                          "access plus 1 week"
+
+	ExpiresByType text/x-component                      "access plus 1 month"
+
+	ExpiresByType text/html                             "access plus 0 seconds"
+
+	ExpiresByType application/javascript                "access plus 1 year"
+	ExpiresByType application/x-javascript              "access plus 1 year"
+	ExpiresByType text/javascript                       "access plus 1 year"
+
+	ExpiresByType application/manifest+json             "access plus 1 week"
+	ExpiresByType application/x-web-app-manifest+json   "access plus 0 seconds"
+	ExpiresByType text/cache-manifest                   "access plus 0 seconds"
+
+	ExpiresByType audio/ogg                             "access plus 1 month"
+	ExpiresByType image/bmp                             "access plus 1 month"
+	ExpiresByType image/gif                             "access plus 1 month"
+	ExpiresByType image/jpeg                            "access plus 1 month"
+	ExpiresByType image/png                             "access plus 1 month"
+	ExpiresByType image/svg+xml                         "access plus 1 month"
+	ExpiresByType image/webp                            "access plus 1 month"
+	ExpiresByType video/mp4                             "access plus 1 month"
+	ExpiresByType video/ogg                             "access plus 1 month"
+	ExpiresByType video/webm                            "access plus 1 month"
+
+	ExpiresByType application/atom+xml                  "access plus 1 hour"
+	ExpiresByType application/rdf+xml                   "access plus 1 hour"
+	ExpiresByType application/rss+xml                   "access plus 1 hour"
+
+	ExpiresByType application/vnd.ms-fontobject         "access plus 1 month"
+	ExpiresByType font/eot                              "access plus 1 month"
+	ExpiresByType font/opentype                         "access plus 1 month"
+	ExpiresByType application/x-font-ttf                "access plus 1 month"
+	ExpiresByType application/font-woff                 "access plus 1 month"
+	ExpiresByType application/x-font-woff               "access plus 1 month"
+	ExpiresByType font/woff                             "access plus 1 month"
+	ExpiresByType application/font-woff2                "access plus 1 month"
+
+	ExpiresByType text/x-cross-domain-policy            "access plus 1 week"
+
+</IfModule>
+
+### End: Browser caching of resource files ###
+
+
+<IfModule mod_deflate.c>
+# Compress HTML, CSS, JavaScript, Text, XML and fonts
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+AddOutputFilterByType DEFLATE application/x-font
+AddOutputFilterByType DEFLATE application/x-font-opentype
+AddOutputFilterByType DEFLATE application/x-font-otf
+AddOutputFilterByType DEFLATE application/x-font-truetype
+AddOutputFilterByType DEFLATE application/x-font-ttf
+AddOutputFilterByType DEFLATE application/x-javascript
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE font/opentype
+AddOutputFilterByType DEFLATE font/otf
+AddOutputFilterByType DEFLATE font/ttf
+AddOutputFilterByType DEFLATE image/svg+xml
+AddOutputFilterByType DEFLATE image/x-icon
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/javascript
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/xml
+
+# Remove browser bugs (only needed for really old browsers)
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+Header append Vary User-Agent
+</IfModule>
+
+
+

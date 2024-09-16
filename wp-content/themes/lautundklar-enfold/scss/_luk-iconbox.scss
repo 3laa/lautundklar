@@ -1,0 +1,84 @@
+.luk-iconbox a.iconbox-wrapper {
+  display: block;
+  transform: scale(1);
+  transition: transform .35s ease-in-out;
+  &:hover {
+    transform: scale(1.025);
+  }
+}
+.luk-iconbox .iconbox-wrapper .iconbox-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: .75rem;
+
+  .iconpostion-left& {
+    justify-content: flex-start;
+  }
+
+  .references-icon& {
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
+}
+
+.luk-iconbox .iconbox-wrapper .iconbox-header .iconbox-title {
+  & h4 {
+    margin-bottom: 0;
+  }
+  .iconpostion-left& {
+    & h4 {
+      font-size: 22px;
+    }
+  }
+  .references-icon& {
+    & h4 {
+      font-size: 15px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.luk-iconbox .iconbox-wrapper .iconbox-header .iconbox-svg {
+  width: 60px;
+  margin-left: 1rem;
+  .iconpostion-left& {
+    margin-left: 0;
+    margin-right: 10px;
+    order: -1;
+  }
+
+  .references-icon& {
+    width: 48px;
+    height: 48px;
+    margin-right: 30px;
+    margin-top: -5px;
+
+    & img,
+    & svg {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  & img,
+  & svg {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.luk-iconbox .iconbox-wrapper .iconbox-content {
+  font-size: 20px;
+  line-height: 162%;
+
+  .references-icon& {
+    @media only screen and (min-width: 479px) {
+      margin-top: -22px;
+    }
+
+    padding-left: 78px;
+    font-weight: 300;
+    font-size: 17px;
+  }
+}

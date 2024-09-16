@@ -1,0 +1,13 @@
+html.responsive body#top #wrap_all .av-flex-cells .hallo-home .flex_cell_inner,
+html.responsive body#top #wrap_all .av-flex-cells .icons-home .flex_cell_inner {
+  margin: 0 auto;
+  @media only screen and (max-width: 768px) {
+    width: 85%;
+    max-width: 85%;
+  }
+  @media only screen and (min-width: 769px) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+

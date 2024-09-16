@@ -1,0 +1,67 @@
+
+// multistep-forms
+#main {
+  & #multi-step-form .fw-btn-submit,
+  & #multi-step-form .fw-toggle-summary {
+    padding: 0px 20px !important;
+    height: 55px;
+    line-height: 55px !important;
+    color: #ffffff;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  & #multi-step-form .fw-btn-submit {
+    background: $primary !important;
+  }
+
+  & #multi-step-form .fw-toggle-summary {
+    background: #9b9b9b !important;
+  }
+
+  #multi-step-form div div h3 {
+    display: none;
+  }
+
+  #multi-step-form div.fw-wizard-step-container .fw-wizard-step  div[data-required="true"] h3 {
+    display: block;
+    font-size: 0;
+
+    &:after {
+      font-size: 16px;
+    }
+  }
+
+  #multi-step-form div.fw-wizard-step-container .fw-wizard-step[data-stepid="4"]  div h3 {
+    display: block !important;
+    font-size: 16px !important;
+
+    &:after {
+      font-size: 16px;
+    }
+  }
+
+  #multi-step-form .fw-progress-bar-container {
+    margin-top: 60px;
+  }
+}
+
+//Multistep Form
+
+#multi-step-form div {
+  .fw-step-part{
+    background: #f9f9f9;
+  }
+  .fw-step-block{
+    display: flex;
+    flex-direction: column;
+  }
+  div[data-required="true"] h3:after{
+    content: "*Pflichtfeld";
+    color: #e55f28;
+    font-size: 1em;
+    text-transform: none;
+  }
+}

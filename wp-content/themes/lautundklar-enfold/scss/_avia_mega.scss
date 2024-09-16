@@ -1,0 +1,40 @@
+html.responsive body#top #header_main .avia-menu .avia_mega_div {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+html.responsive body#top #header_main .avia-menu .avia_mega_div .sub-menu {
+  max-width: 1270px;
+  float: right;
+
+}
+
+html.responsive body#top #header_main .avia-menu .avia_mega_div>.sub-menu {
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+html.responsive body#top #header_main .avia-menu .avia_mega_div .sub-menu .menu-item .mega_menu_title {
+  margin-bottom: 40px;
+  & a {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 25px;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+html.responsive body#top #header_main .avia-menu .avia_mega_div .sub-menu .menu-item .sub-menu li.menu-item {
+  margin-bottom: 20px;
+  & a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    & span.avia-menu-text {
+      font-weight: 400;
+    }
+
+  }
+}
