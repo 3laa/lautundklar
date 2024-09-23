@@ -1,0 +1,32 @@
+.luk_marquee_meta_box_side,
+.luk_marquee_meta_box_normal {}
+
+.mbg-box {}
+.mbg-box .mbg-description {}
+
+.mbg-box .mbg-field + .mbg-field {
+    margin-top: 15px;
+}
+
+.mbg-box .mbg-field .mbg-label {
+    display: block;
+    font-weight: bolder;
+    font-size: 13px;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.mbg-box .mbg-field h1 {
+    font-weight: bolder;
+}
+
+.mbg-box .mbg-field .divider {
+    margin-bottom: 20px;
+}
+
+.mbg-box .mbg-field .mbg-input-wrapper {}
+
+.mbg-box .mbg-field .mbg-input-wrapper input[type="text"],
+.mbg-box .mbg-field .mbg-input-wrapper select {
+    width: 100%;
+}

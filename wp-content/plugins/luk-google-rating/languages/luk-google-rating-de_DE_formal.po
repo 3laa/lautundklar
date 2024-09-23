@@ -1,0 +1,117 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: LUK Google Rating\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-29 11:56+0000\n"
+"PO-Revision-Date: 2019-08-29 12:02+0000\n"
+"Last-Translator: admin <christoph@lautundklar.de>\n"
+"Language-Team: Deutsch (Sie)\n"
+"Language: de_DE_formal\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.0; wp-5.2.2"
+
+#: includes/template/settings.php:510
+msgid "Add Name and ID"
+msgstr "Namen und ID einfügen"
+
+#: includes/template/output.php:460
+msgid "Amount of Reviews"
+msgstr "Anzahl der Bewertungen"
+
+#. Description of the plugin
+msgid ""
+"Checks Google Rating for given Google-PlaceID or Company Name to display "
+"rating score and add structured rating data."
+msgstr ""
+"Abfrage von Google-Ratings-Werten für ein Unternehmen. Zur Einbindung als "
+"Webseiten-Element und strukturierte Daten (Google)."
+
+#. Author of the plugin
+msgid "Christoph Kern"
+msgstr "Christoph Kern"
+
+#: includes/template/settings.php:457 includes/template/output.php:421
+msgid "Company"
+msgstr "Unternehmen"
+
+#: includes/template/settings.php:460 includes/template/output.php:424
+msgid "Company Name"
+msgstr "Name des Unternehmens"
+
+#: includes/template/settings.php:470 includes/template/output.php:433
+msgid "Company-Place-ID"
+msgstr "Place-ID des Unternehmens"
+
+#: includes/template/output.php:451
+msgid "Current Rating"
+msgstr "Aktuelles Rating"
+
+#: includes/template/settings.php:450
+msgid "Google Rating Integration"
+msgstr "Google Rating Integration"
+
+#: includes/template/settings.php:485 includes/template/output.php:440
+msgid "Google-API"
+msgstr "Google-API"
+
+#: includes/template/settings.php:488 includes/template/output.php:443
+msgid "Google-API-Key"
+msgstr "Google-API-Schlüssel"
+
+#: includes/template/settings.php:467 includes/template/output.php:430
+msgid "Google-Place-ID"
+msgstr "Google-Place-ID"
+
+#. Author URI of the plugin
+msgid "https://lautundklar.de"
+msgstr "https://lautundklar.de"
+
+#: includes/template/settings.php:495
+msgid "If you don't know the Place-ID of a Company you can query it here"
+msgstr ""
+"Wenn Ihnen die Place-ID Ihres Unternehmens nicht bekannt ist, können Sie sie "
+"hier abfragen"
+
+#: includes/template/settings.php:476
+msgid "Load Structured Data in Header"
+msgstr "Strukturierte Daten im Header laden"
+
+#. Name of the plugin
+msgid "LUK Google Rating"
+msgstr "LUK Google Rating"
+
+#: index.php:27
+msgid "Query Rating / Preview"
+msgstr "Rating abfragen / anzeigen"
+
+#: includes/template/output.php:476
+msgid "Rating-Preview"
+msgstr "Rating-Voransicht"
+
+#: index.php:85
+msgid "Ratings"
+msgstr "Bewertungen"
+
+#: includes/template/output.php:472
+msgid "Refresh Rating"
+msgstr "Rating aktualisieren"
+
+#: includes/template/output.php:484
+msgid "Refresh Rating to display Preview"
+msgstr "Rating aktualisieren um Voransicht darzustellen"
+
+#: includes/template/output.php:454 includes/template/output.php:463
+msgid "Refresh Rating to display Values"
+msgstr "Rating aktualisieren um Werte anzuzeigen"
+
+#: index.php:86
+msgid "Reviews"
+msgstr "Rezensionen"
+
+#: includes/template/settings.php:520
+msgid "Save"
+msgstr "Speichern"

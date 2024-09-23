@@ -1,5 +1,8 @@
 .idea
 !.gitignore
-wp-content/plugins/
+wp-content/plugins/*
+!wp-content/plugins/luk-google-rating/
+!wp-content/plugins/luk-marquee/
+!wp-content/plugins/luk-elements/
 wp-content/themes/*
 !wp-content/themes/lautundklar-enfold/

@@ -1,0 +1,114 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: LUK Google Rating\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-29 11:56+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.0; wp-5.2.2"
+
+#: includes/template/settings.php:510
+msgid "Add Name and ID"
+msgstr ""
+
+#: includes/template/output.php:460
+msgid "Amount of Reviews"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Checks Google Rating for given Google-PlaceID or Company Name to display "
+"rating score and add structured rating data."
+msgstr ""
+
+#. Author of the plugin
+msgid "Christoph Kern"
+msgstr ""
+
+#: includes/template/settings.php:457 includes/template/output.php:421
+msgid "Company"
+msgstr ""
+
+#: includes/template/settings.php:460 includes/template/output.php:424
+msgid "Company Name"
+msgstr ""
+
+#: includes/template/settings.php:470 includes/template/output.php:433
+msgid "Company-Place-ID"
+msgstr ""
+
+#: includes/template/output.php:451
+msgid "Current Rating"
+msgstr ""
+
+#: includes/template/settings.php:450
+msgid "Google Rating Integration"
+msgstr ""
+
+#: includes/template/settings.php:485 includes/template/output.php:440
+msgid "Google-API"
+msgstr ""
+
+#: includes/template/settings.php:488 includes/template/output.php:443
+msgid "Google-API-Key"
+msgstr ""
+
+#: includes/template/settings.php:467 includes/template/output.php:430
+msgid "Google-Place-ID"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://lautundklar.de"
+msgstr ""
+
+#: includes/template/settings.php:495
+msgid "If you don't know the Place-ID of a Company you can query it here"
+msgstr ""
+
+#: includes/template/settings.php:476
+msgid "Load Structured Data in Header"
+msgstr ""
+
+#. Name of the plugin
+msgid "LUK Google Rating"
+msgstr ""
+
+#: index.php:27
+msgid "Query Rating / Preview"
+msgstr ""
+
+#: includes/template/output.php:476
+msgid "Rating-Preview"
+msgstr ""
+
+#: index.php:85
+msgid "Ratings"
+msgstr ""
+
+#: includes/template/output.php:472
+msgid "Refresh Rating"
+msgstr ""
+
+#: includes/template/output.php:484
+msgid "Refresh Rating to display Preview"
+msgstr ""
+
+#: includes/template/output.php:454 includes/template/output.php:463
+msgid "Refresh Rating to display Values"
+msgstr ""
+
+#: index.php:86
+msgid "Reviews"
+msgstr ""
+
+#: includes/template/settings.php:520
+msgid "Save"
+msgstr ""
