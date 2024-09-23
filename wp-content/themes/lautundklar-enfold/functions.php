@@ -119,3 +119,20 @@ function avia_append_burger_menu ( $items , $args )
 
     return $items;
 }
+
+function remove_plugin_rptp_scripts() {
+    wp_dequeue_style( 'rpt' );
+    wp_deregister_style( 'rpt' );
+
+    wp_dequeue_script( 'rpt' );
+    wp_deregister_script( 'rpt' );
+}
+//add_action( 'wp_enqueue_scripts', 'remove_plugin_rptp_scripts', 100 );
+
+function add_custom_rptp_scripts() {
+    if ( is_page( 9282 ) ) {
+        wp_enqueue_style( 'rpt-new', get_stylesheet_directory_uri() . '/css/rpt_style.min.css', array(), RPTP_VER);
+        wp_enqueue_script('rpt-new', get_stylesheet_directory_uri() . '/js/rptp.min.js', array('jquery'), RPTP_VER, true);
+    }
+}
+//add_action( 'wp_enqueue_scripts', 'add_custom_rptp_scripts', 10000 );

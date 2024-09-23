@@ -1,4 +1,14 @@
 const $ = jQuery.noConflict();
+let $pricingTable = [];
+let pricingTableOffsetTop = 0;
+function initPricingTable() {
+    if ($('html.responsive body#top table.avia-table.pricing-table').length) {
+        $pricingTable = $('html.responsive body#top table.avia-table.pricing-table');
+        pricingTableOffsetTop = $pricingTable.offset().top;
+    }
+}
+
+
 
 function viewPort(elements, animationClass, topOffset=0) {
     let $window = $(window);
@@ -78,9 +88,81 @@ function mmenujs() {
     });
 }
 
+function pricingTable() {
+    let $pricePlans = $('.pricing-box');
+    let $priceTables = $('.pricing-table');
+    if ($pricePlans.length && $priceTables.length) {
+        //clean the services in plans
+        $pricePlans.find('#rpt_pricr.rpt_plans .rpt_plan .rpt_features').slideUp().html('');
+
+        let $pricePlansBox = $pricePlans.find('#rpt_pricr.rpt_plans .rpt_plan');
+
+        $priceTables.find('tr:not(.avia-pricing-row)').each(function () {
+            let $row = $(this);
+            let $tdThs = $row.find('td,th');
+            if ($row.hasClass('avia-heading-row')) {
+                $($pricePlansBox).find('.rpt_features').append('<div class="rpt_feature rpt_feature_head"> '+$($tdThs[0]).text()+' </div>')
+            } else {
+                $($($pricePlansBox[0])).find('.rpt_features').append('<div class="rpt_feature rpt_feature_element"> <strong>'+$($tdThs[0]).text()+': </strong>'+$($tdThs[1]).html()+' </div>');
+                $($($pricePlansBox[1])).find('.rpt_features').append('<div class="rpt_feature rpt_feature_element"> <strong>'+$($tdThs[0]).text()+': </strong>'+$($tdThs[2]).html()+' </div>');
+                $($($pricePlansBox[2])).find('.rpt_features').append('<div class="rpt_feature rpt_feature_element"> <strong>'+$($tdThs[0]).text()+': </strong>'+$($tdThs[3]).html()+' </div>');
+                $($($pricePlansBox[3])).find('.rpt_features').append('<div class="rpt_feature rpt_feature_element"> <strong>'+$($tdThs[0]).text()+': </strong>'+$($tdThs[4]).html()+' </div>');
+            }
+        });
+        $pricePlans.find('#rpt_pricr.rpt_plans .rpt_plan .rpt_features').each(function () {
+            let $rptActions = $('<div class="rpt_actions"></div>');
+            let $actionCompare = $('<a class="rpt_action rpt_action_compare" href="#pricing_table">Leistungen vergleichen</a>');
+            let $actionShow = $('<span class="rpt_action rpt_action_show">Leistungen anzeigen</span>');
+            let $actionHide = $('<span class="rpt_action rpt_action_hide">Verbergen</span>');
+            $actionShow.on('click', function () {
+                $(this).parents('.rpt_plan').addClass('show-features')
+                $(this).parents('.rpt_plan').find('.rpt_features').slideDown();
+            })
+            $actionHide.on('click', function () {
+                $(this).parents('.rpt_plan').removeClass('show-features')
+                $(this).parents('.rpt_plan').find('.rpt_features').slideUp();
+            })
+            $rptActions.append($actionCompare);
+            $rptActions.append($actionShow);
+            $rptActions.append($actionHide);
+            $rptActions.insertBefore($(this));
+        });
+    }
+
+    initPricingTable();
+}
+
+function pricingTableScroll() {
+    if ($pricingTable.length) {
+        if ($(window).scrollTop() > (pricingTableOffsetTop - 100)) {
+            let top = ($(window).scrollTop() - pricingTableOffsetTop) + 100;
+            $pricingTable.find('tr.avia-pricing-row').css('top', top)
+        } else {
+            $pricingTable.find('tr.avia-pricing-row').css('top', 0)
+        }
+    }
+}
+
+function contactForm() {
+    let $contactForm = $('#contact_form');
+    if ($contactForm.length) {
+        let currentParams = new URLSearchParams(window.location.search);
+        if (currentParams.size > 0) {
+            let betreff = currentParams.get('betreff');
+            let message = currentParams.get('message');
+
+            $contactForm.find('select[name="Betreff"]').val(betreff);
+            $contactForm.find('select[name="your-message"]').val(message);
+
+            console.log(betreff, message)
+            console.log($contactForm.find('select[name="Betreff"]'))
+            console.log($contactForm.find('textarea[name="your-message"]'))
+        }
+    }
+}
 
 $(document).ready(function() {
-
+    pricingTable();
     mmenujs();
     changeVersion();
     masonryLoadMore();
@@ -88,12 +170,17 @@ $(document).ready(function() {
     viewPort('.luk-clients', 'clients-animation');
     viewPort('.avia-content-slider .slide-entry-wrap', 'clients-animation');
     viewPort('.reference', '-start-reference', -500);
+    initPricingTable();
+    contactForm();
 });
 $(window).on('scroll', function () {
+    initPricingTable()
     viewPort('.av_textblock_section, .iconbox_content_container, .to-anim', 'slide-top', 500);
     viewPort('.luk-clients', 'clients-animation');
     viewPort('.avia-content-slider .slide-entry-wrap', 'clients-animation');
     viewPort('.reference', '-start-reference', -500);
     masonryLoadMore();
+    pricingTableScroll();
+
 });
 

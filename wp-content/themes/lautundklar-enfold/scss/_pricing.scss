@@ -1,0 +1,330 @@
+html.responsive body#top .pricing-box #rpt_pricr.rpt_plans .rpt_plugin_f {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  & .rpt_price_switch_wrap,
+  & .rpt_switch_label_wrap {
+    width: 100%;
+  }
+
+  div:not([class]) {
+    display: none;
+  }
+}
+html.responsive body#top .pricing-box #rpt_pricr.rpt_plans .rpt_plugin_f .rpt_plan {
+  float: none !important;
+  box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all .35s ease-in-out;
+  margin-bottom: 35px;
+  margin-right: 0;
+  width: 100%;
+
+  @media only screen and (min-width: 768px)
+  {
+    margin-right: 0;
+    width: 48%;
+  }
+
+  @media only screen and (min-width: 1440px)
+  {
+    margin-right: 0;
+    width: 23.5%;
+
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 0.75);
+  }
+
+  & * {
+    hyphens: manual !important;
+  }
+}
+
+.pricing-box #rpt_pricr.rpt_plans .rpt_plugin_f .rpt_plan {
+  & .rpt_title {
+    border: 0 none !important;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-bottom: -1px !important;
+    background: $primary;
+    padding: 15px;
+    font-weight: 700 !important;
+    font-size: 25px;
+    color: $white;
+    line-height: 1;
+  }
+
+  & .rpt_head {
+    border: 0 none !important;
+    background: linear-gradient(0deg, $white 0, $page 100%);
+
+    & .rpt_price {
+      font-weight: 700 !important;
+      font-size: 50px;
+      & * {
+        font-weight: 700 !important;
+      }
+    }
+
+    & .rpt_subtitle {
+      color: $primary !important;
+      font-weight: 600 !important;
+    }
+
+    & .rpt_description {
+      color: $color !important;
+      font-weight: 600 !important;
+    }
+  }
+
+  &.rpt_recommended_plan .rpt_head {
+    background: $primary;
+
+    & .rpt_price {
+      color: $white !important;
+      & * {
+        color: $white !important;
+      }
+    }
+
+    & .rpt_subtitle {
+      color: $white !important;
+    }
+
+    & .rpt_description {
+      color: $page !important;
+    }
+  }
+
+  &.rpt_recommended_plan .rpt_title {
+    font-size: 30px;
+  }
+
+  & .rpt_features {
+    padding: 0;
+    background: $white;
+  }
+
+  & .rpt_features .rpt_feature {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 15px 12px;
+    color: $black;
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 1px solid $gray;
+
+    &.rpt_feature_head {
+      background: $primary !important;
+      color: $white;
+      font-size: 20px;
+      padding: 12px 12px;
+      font-weight: 600;
+    }
+
+    &:nth-child(odd) {
+      background: $page;
+    }
+
+    & strong,
+    & span {
+      //margin-left: 5px;
+    }
+  }
+
+  & .rpt_features .rpt_feature .icon {
+    font-size: 20px;
+    &.icon-yes {
+      color: #0a9b8f;
+    }
+    &.icon-no {
+      color: #f5222d;
+    }
+  }
+
+  & .rpt_foot {
+    background: $primary !important;
+    padding: 12px !important;
+    font-weight: 700 !important;
+    font-size: 25px;
+    color: $white;
+    line-height: 1 !important;
+  }
+
+  & .rpt_actions {
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    flex-direction: column;
+    cursor: pointer;
+
+    & .rpt_action {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      padding: 15px 12px;
+      color: $primary;
+      font-size: 14px;
+      border-top: 1px solid $gray;
+      font-weight: 600;
+      &:after {
+        font-family: 'entypo-fontello';
+        font-weight: normal;
+        content: '';
+        margin-left: 10px;
+      }
+    }
+  }
+
+  &.show-features {
+    & .rpt_actions .rpt_action.rpt_action_hide {
+      display: flex;
+    }
+  }
+  &:not(.show-features) {
+    & .rpt_actions .rpt_action.rpt_action_show {
+      display: flex;
+    }
+    @media only screen and (min-width: 768px)
+    {
+      & .rpt_actions .rpt_action.rpt_action_show {
+        display: none;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 768px)
+  {
+    & .rpt_actions .rpt_action.rpt_action_compare {
+      display: flex;
+    }
+  }
+}
+
+html.responsive body#top table.avia-table.pricing-table {
+  position: relative;
+  overflow: hidden;
+
+  tbody {
+    display: block;
+    padding-top: 60px;
+  }
+  tbody, tr, td, th {
+    border: 0 none;
+  }
+
+  border: 0 none !important;
+  background: $white;
+  width: 100%;
+  clear: both;
+  margin: 30px 0;
+  table-layout: fixed;
+
+  & tr:nth-child(odd) {
+    background: $page;
+    & td, th {
+      background: $page;
+    }
+  }
+
+  & tr td, tr th {
+    width: 20%;
+    padding: 15px;
+    border-right: 1px solid $gray;
+    border-bottom: 1px solid $white;
+    color: $black;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 500;
+    &:first-child {
+      text-align: left;
+      font-weight: 600;
+    }
+    &:last-child {
+      border-right: none;
+    }
+
+    &.avia-highlight-col {
+      /*background: lighten($primary, 15%);
+      color: $white;*/
+    }
+  }
+
+  & .icon {
+    font-size: 20px;
+    color: #0a9b8f;
+
+    &.icon-no {
+      color: #f5222d;
+    }
+  }
+
+  & tr.avia-pricing-row {
+    width: 100%;
+    transition: position .35s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    background: transparent !important;
+    //transition: top .1s ease-in-out;
+    & td:first-child {
+
+    }
+    & td, th {
+      padding: 0px;
+      border: 1px solid $white;
+      border-bottom: 0 none !important;
+      display: flex;
+      justify-content: stretch;
+      align-items: flex-end;
+      background: $white;
+      & span {
+        text-align: center;
+        background: $primary;
+        font-weight: 700;
+        font-size: 25px;
+        color: $white;
+        line-height: 1;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        border-bottom: 1px solid $white;
+      }
+
+      &.avia-highlight-col span {
+        font-size: 30px;
+        height: 60px;
+      }
+    }
+
+
+  }
+
+  & tr.avia-heading-row {
+    & td, th {
+      text-align: left;
+      background: $primary;
+      padding: 15px;
+      font-weight: 500;
+      font-size: 16px;
+      color: $white;
+      line-height: 1;
+      border-right: 0 none;
+    }
+  }
+}

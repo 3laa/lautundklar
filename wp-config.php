@@ -73,6 +73,9 @@ if ( ! defined( 'WP_CACHE' ) ) {
 	define( 'WP_CACHE', true );
 }
 
+define( 'WP_DEBUG', false );
+
+
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
 
