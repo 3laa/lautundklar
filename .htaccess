@@ -91,6 +91,8 @@
         Redirect 301 /kompetenzen/typo3-cms/ https://lautundklar.de/typo3/
         Redirect 301 /neue-funnel-page-fuer-die-communigate-gmbh https://lautundklar.de/recruiting-kampagne-mit-funnelpages-fuer-die-communigate-gmbh/
         Redirect 301 /neue-funnel-page-fuer-die-communigate-gmbh/ https://lautundklar.de/recruiting-kampagne-mit-funnelpages-fuer-die-communigate-gmbh/
+        Redirect 301 /team-2023 https://lautundklar.de/team
+        Redirect 301 /team-2023/ https://lautundklar.de/team
 
 		# Protect System Files - Security > Settings > System Tweaks > System Files
 		RewriteRule ^wp-admin/install\.php$ - [F]

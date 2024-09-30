@@ -393,3 +393,13 @@ body#top #hero-element{
 .mm-menu--offcanvas.mm-menu:not(.mm-menu--opened){
   left:100%;
 }
+
+.svg-underline {
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    mask-image: url("/wp-content/themes/lautundklar-enfold/icons/referenzen.svg");
+  }
+}
